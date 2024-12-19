@@ -1,0 +1,9 @@
+
+*.map
+*.mes
+/__history
+*.prjmgc
+*.tvsconfig
+*.identcache
+*.dcu
+*.dsk

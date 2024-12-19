@@ -5,8 +5,8 @@ object frmMain: TfrmMain
   AlphaBlend = True
   AlphaBlendValue = 250
   Caption = 'Fix SetFocus'
-  ClientHeight = 465
-  ClientWidth = 691
+  ClientHeight = 464
+  ClientWidth = 687
   Color = clBtnFace
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
@@ -14,18 +14,17 @@ object frmMain: TfrmMain
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = True
+  Position = poDesigned
   ScreenSnap = True
   ShowHint = True
   SnapBuffer = 3
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 15
   object Splitter: TSplitter
     Left = 0
     Top = 197
-    Width = 691
+    Width = 687
     Height = 3
     Cursor = crVSplit
     Align = alTop
@@ -35,7 +34,7 @@ object frmMain: TfrmMain
   object pnlFiles: TPanel
     Left = 0
     Top = 0
-    Width = 691
+    Width = 687
     Height = 197
     Align = alTop
     Caption = 'pnlFiles'
@@ -75,7 +74,7 @@ object frmMain: TfrmMain
     object lbxResults: TListBox
       Left = 1
       Top = 46
-      Width = 689
+      Width = 685
       Height = 110
       Hint = 'Double click to load file'
       Align = alTop
@@ -88,16 +87,16 @@ object frmMain: TfrmMain
     object Panel1: TPanel
       Left = 1
       Top = 1
-      Width = 689
+      Width = 685
       Height = 45
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 2
       DesignSize = (
-        689
+        685
         45)
       object edtFilter: TLabeledEdit
-        Left = 468
+        Left = 464
         Top = 18
         Width = 210
         Height = 23
@@ -111,7 +110,7 @@ object frmMain: TfrmMain
       object edtPath: TLabeledEdit
         Left = 8
         Top = 18
-        Width = 443
+        Width = 439
         Height = 23
         Anchors = [akLeft, akTop, akRight]
         EditLabel.Width = 170
@@ -153,7 +152,7 @@ object frmMain: TfrmMain
     end
     object btnReset: TButton
       AlignWithMargins = True
-      Left = 612
+      Left = 608
       Top = 159
       Width = 75
       Height = 34
@@ -194,8 +193,8 @@ object frmMain: TfrmMain
   object pnlView: TPanel
     Left = 0
     Top = 200
-    Width = 691
-    Height = 265
+    Width = 687
+    Height = 264
     Align = alClient
     TabOrder = 1
     Visible = False
@@ -203,15 +202,15 @@ object frmMain: TfrmMain
       AlignWithMargins = True
       Left = 4
       Top = 4
-      Width = 683
+      Width = 679
       Height = 15
       Align = alTop
     end
     object mmoView: TMemo
       Left = 1
       Top = 22
-      Width = 689
-      Height = 204
+      Width = 685
+      Height = 203
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -224,8 +223,8 @@ object frmMain: TfrmMain
     end
     object Panel2: TPanel
       Left = 1
-      Top = 226
-      Width = 689
+      Top = 225
+      Width = 685
       Height = 38
       Align = alBottom
       TabOrder = 1

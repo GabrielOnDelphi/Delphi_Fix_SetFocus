@@ -4,17 +4,12 @@ uses
   FastMM4,
   Vcl.Forms,
   uMainForm in 'uMainForm.pas' {frmMain},
-  cFindInFile in 'cFindInFile.pas',
-  ccAppData in '..\..\Packages\CubicCommonControls\ccAppData.pas',
-  FormLog in '..\..\Packages\CubicCommonControls\FormLog.pas',
-  ccIO in '..\..\Packages\CubicCommonControls\ccIO.pas';
+  cbAppData in '..\..\Packages\CubicCommonControls\cbAppData.pas';
 
 {$R *.res}
 
 begin
-  Application.Initialize;
-  AppData:= TAppDataEx.Create('Cubic-Fix SetFocus');
-  Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmMain, frmMain);
+  AppData:= TAppData.Create('Light-Fix SetFocus');
+  AppData.CreateMainForm(TfrmMain, frmMain);
   Application.Run;
 end.

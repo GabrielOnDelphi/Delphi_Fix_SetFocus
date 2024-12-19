@@ -1,4 +1,4 @@
-UNIT uMainForm;
+﻿UNIT uMainForm;
 
 {-------------------------------------------------------------------------------------------------------------
    Description here: https://gabrielmoraru.com/setfocus-is-broken-in-delphi/
@@ -21,7 +21,7 @@ INTERFACE
 
 USES
   Winapi.Windows, Winapi.messages, System.SysUtils, System.Classes, Vcl.Controls, Vcl.Forms,
-  Vcl.StdCtrls, Vcl.ExtCtrls, cFindInFile, Vcl.Menus, cmSearchResult;
+  Vcl.StdCtrls, Vcl.ExtCtrls, cFindSetFocus, Vcl.Menus, cmSearchResult, Vcl.Mask;
 
 TYPE
   TfrmMain = class(TForm)
@@ -67,12 +67,7 @@ VAR
 implementation {$R *.dfm}
 
 USES
-   ccIO,
-   cccore,
-   ccAppData,
-   cmINIFileQuick,
-   csSystem,
-   csExecuteShell;
+   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, cbAppData, cvINIFile, cmINIFileQuick, csExecuteShell;
 
 VAR
   CurFoundPos: Integer;
@@ -87,7 +82,7 @@ begin
    begin
      MesajInfo('SetFocus is broken in Delphi.'+ CRLF+
                'Try to set focus on a visual control that is disabled or is invisible or simply is not focusable, and the program will crash.'+ CRLF+
-               'I created a safe alternative for Delphi�s SetFocus. This tool does the batch replace.');
+               'I created a safe alternative for Delphi’s SetFocus. This tool does the batch replace.');
      executeurl('https://gabrielmoraru.com/setfocus-is-broken-in-delphi/');
    end;
 end;
@@ -96,7 +91,6 @@ end;
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
  WriteString('Path', edtPath.Text);  { Save GUI }
- AppData.Initializing:= FALSE;
  FreeResults;                        { Release objects }
 end;
 
@@ -114,7 +108,7 @@ end;
 procedure ConvertToUTF(FileName: string);
 begin
  VAR s:= StringFromFile(FileName, System.SysUtils.TEncoding.UTF8);
- StringToFile(FileName, s, woOverwrite, TRUE);
+ StringToFile(FileName, s, woOverwrite, wpAuto);
 end;
 
 
@@ -141,7 +135,7 @@ begin
   try
     for TextFile in FileList do
      begin
-       SearchResult:= FindStringInFile(TextFile, (Sender as TButton).Tag = 1);
+       SearchResult:= FindSetFocusInFile(TextFile, (Sender as TButton).Tag = 1);
        Replaces:= Replaces + SearchResult.Count;
 
        if SearchResult.Found
@@ -153,7 +147,7 @@ begin
        else
         begin
           lbxResults.Items.Add(TextFile);
-          FreeAndNil(SearchResult);
+          //FreeAndNil(SearchResult);
         end;
      end;
 
@@ -189,9 +183,9 @@ begin
 
    //Scroll to first found pos
    var CurLine:= GetSelectedSearch.Positions[0];
-   SendMessage(mmoView.Handle, EM_LINESCROLL, 0, CurLine);
+   SendMessage(mmoView.Handle, EM_LINESCROLL, 0, CurLine.LinePos);
 
-   LastLine:= CurLine;
+   LastLine:= CurLine.LinePos;
   end;
 end;
 
@@ -215,7 +209,7 @@ begin
    lblRewind.Visible:= true;
   end;
 
- CurLine:= GetSelectedSearch.Positions[CurFoundPos];
+ CurLine:= GetSelectedSearch.Positions[CurFoundPos].LinePos;
  Delta:= CurLine - LastLine;
  LastLine:= CurLine;
 
@@ -238,7 +232,7 @@ begin
    lblRewind.Visible:= true;
   end;
 
- CurLine:= GetSelectedSearch.Positions[CurFoundPos];
+ CurLine:= GetSelectedSearch.Positions[CurFoundPos].LinePos;
  Delta:= CurLine - LastLine;
  LastLine:= CurLine;
 
