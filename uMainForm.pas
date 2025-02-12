@@ -24,7 +24,7 @@ USES
   Vcl.StdCtrls, Vcl.ExtCtrls, cFindSetFocus, Vcl.Menus, cmSearchResult, Vcl.Mask;
 
 TYPE
-  TfrmMain = class(TForm)
+  TfrmMain = class(TLightForm)
     btnNext       : TButton;
     btnPrev       : TButton;
     btnReset      : TButton;
