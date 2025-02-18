@@ -67,7 +67,7 @@ VAR
 implementation {$R *.dfm}
 
 USES
-   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, cbAppData, cvINIFile, cmINIFileQuick, csExecuteShell;
+   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, cbAppData, cvINIFile, cbINIFileQuick, csExecuteShell;
 
 VAR
   CurFoundPos: Integer;
@@ -77,7 +77,7 @@ VAR
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
-  edtPath.Text:= cmINIFileQuick.ReadString('Path', 'C:\Projects');
+  edtPath.Text:= cbINIFileQuick.ReadString('Path', 'C:\Projects');
   if AppData.RunningFirstTime then
    begin
      MesajInfo('SetFocus is broken in Delphi.'+ CRLF+
