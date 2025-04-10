@@ -67,7 +67,8 @@ VAR
 implementation {$R *.dfm}
 
 USES
-   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, cbAppData, cvINIFile, cbINIFileQuick, csExecuteShell;
+   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, ccAppData, cbAppDataVCL
+, cvINIFile, cbINIFileQuick, csExecuteShell;
 
 VAR
   CurFoundPos: Integer;
