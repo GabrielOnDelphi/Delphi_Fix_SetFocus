@@ -67,7 +67,7 @@ VAR
 implementation {$R *.dfm}
 
 USES
-   ccIO, ccTextFile, cmIO, cmIO.Win, ccCore, csSystem, cbDialogs, ccAppData, cbAppDataVCL
+   ccIO, ccTextFile, cmIO, ccCore, csSystem, cbDialogs, ccAppData, cbAppDataVCL
 , cvINIFile, cbINIFileQuick, csExecuteShell;
 
 VAR

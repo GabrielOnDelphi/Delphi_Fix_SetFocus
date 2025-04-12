@@ -28,7 +28,7 @@ function FindSetFocusInFile(CONST FileName: string; Replace: Boolean): TSearchRe
 
 IMPLEMENTATION
 
-USES cmPascal, ccCore, csSystem, cbDialogs, ccIO, ccTextFile, cmIO, cmIO.Win;
+USES cmPascal, ccCore, csSystem, cbDialogs, ccIO, ccTextFile, cmIO;
 
 
 CONST
