@@ -81,7 +81,7 @@ begin
   edtPath.Text:= cbINIFileQuick.ReadString('Path', 'C:\Projects');
   if AppData.RunningFirstTime then
    begin
-     MesajInfo('SetFocus is broken in Delphi.'+ CRLF+
+     MessageInfo('SetFocus is broken in Delphi.'+ CRLF+
                'Try to set focus on a visual control that is disabled or is invisible or simply is not focusable, and the program will crash.'+ CRLF+
                'I created a safe alternative for Delphi’s SetFocus. This tool does the batch replace.');
      executeurl('https://gabrielmoraru.com/setfocus-is-broken-in-delphi/');
