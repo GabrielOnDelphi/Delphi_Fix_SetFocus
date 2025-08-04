@@ -4,7 +4,7 @@ uses
   FastMM4,
   Vcl.Forms,
   uMainForm in 'uMainForm.pas' {frmMain},
-  cbAppDataVCL in '..\..\Packages\CubicCommonControls\cbAppData.pas';
+  LightVcl.Common.AppData in '..\..\Packages\CubicCommonControls\cbAppData.pas';
 
 {$R *.res}
 

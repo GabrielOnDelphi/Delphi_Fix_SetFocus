@@ -17,7 +17,7 @@ USES
 
 IMPLEMENTATION
 
-//USES ccCore, csSystem, cbDialogs;
+//USES LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs;
 
 
 
