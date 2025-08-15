@@ -21,7 +21,7 @@ INTERFACE
 
 USES
   Winapi.Windows, Winapi.messages, System.SysUtils, System.Classes, Vcl.Controls, Vcl.Forms,
-  Vcl.StdCtrls, Vcl.ExtCtrls, cFindSetFocus, Vcl.Menus, cmSearchResult, Vcl.Mask;
+  Vcl.StdCtrls, Vcl.ExtCtrls, cFindSetFocus, Vcl.Menus, LightCore.SearchResult, Vcl.Mask;
 
 TYPE
   TfrmMain = class(TLightForm)

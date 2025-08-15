@@ -20,7 +20,7 @@ unit cFindSetFocus;
 interface
 
 uses
-  System.SysUtils, System.Classes, cmSearchResult;
+  System.SysUtils, System.Classes, LightCore.SearchResult;
 
 
 function FindSetFocusInFile(CONST FileName: string; Replace: Boolean): TSearchResult;
@@ -28,7 +28,7 @@ function FindSetFocusInFile(CONST FileName: string; Replace: Boolean): TSearchRe
 
 IMPLEMENTATION
 
-USES cmPascal, LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.IO, LightCore.TextFile, LightVcl.Common.IO;
+USES LightCore.Pascal, LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.IO, LightCore.TextFile, LightVcl.Common.IO;
 
 
 CONST
