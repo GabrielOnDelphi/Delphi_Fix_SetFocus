@@ -67,7 +67,7 @@ VAR
 implementation {$R *.dfm}
 
 USES
-   LightCore.IO, LightCore.TextFile, LightVcl.Common.IO, LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.AppData, LightVcl.Common.AppData
+   LightCore.IO, LightCore.TextFile, LightVcl.Common.IO, LightCore, LightCore.Time, LightCore.Types, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.AppData, LightVcl.Common.AppData
 , LightVcl.Visual.INIFile, LightVcl.Common.IniFileQuick, LightVcl.Common.ExecuteShell;
 
 VAR

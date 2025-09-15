@@ -28,7 +28,7 @@ function FindSetFocusInFile(CONST FileName: string; Replace: Boolean): TSearchRe
 
 IMPLEMENTATION
 
-USES LightCore.Pascal, LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.IO, LightCore.TextFile, LightVcl.Common.IO;
+USES LightCore.Pascal, LightCore, LightCore.Time, LightCore.Types, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.IO, LightCore.TextFile, LightVcl.Common.IO;
 
 
 CONST

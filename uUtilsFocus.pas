@@ -17,7 +17,7 @@ USES
 
 IMPLEMENTATION
 
-//USES LightCore, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs;
+//USES LightCore, LightCore.Time, LightCore.Types, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs;
 
 
 
