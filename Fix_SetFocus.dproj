@@ -90,6 +90,7 @@
         </DelphiCompile>
         <DCCReference Include="uMainForm.pas">
             <Form>frmMain</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\..\Packages\CubicCommonControls\cbAppData.pas"/>
         <BuildConfiguration Include="Base">
@@ -112,10 +113,7 @@
                 <Source>
                     <Source Name="MainSource">Fix_SetFocus.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                </Excluded_Packages>
+                <Excluded_Packages/>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>
