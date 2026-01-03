@@ -68,7 +68,7 @@ implementation {$R *.dfm}
 
 USES
    LightCore.IO, LightCore.TextFile, LightVcl.Common.IO, LightCore, LightCore.Time, LightCore.Types, LightVcl.Common.SystemTime, LightVcl.Common.Clipboard, LightVcl.Common.Dialogs, LightCore.AppData, LightVcl.Visual.AppData
-, LightVcl.Visual.INIFile, LightVcl.Common.IniFileQuick, LightVcl.Common.ExecuteShell;
+, LightVcl.Visual.INIFile, LightCore.INIFileQuick, LightVcl.Common.ExecuteShell;
 
 VAR
   CurFoundPos: Integer;
@@ -78,7 +78,7 @@ VAR
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
-  edtPath.Text:= LightVcl.Common.IniFileQuick.ReadString('Path', 'C:\Projects');
+  edtPath.Text:= LightCore.INIFileQuick.ReadString('Path', 'C:\Projects');
   if AppData.RunningFirstTime then
    begin
      MessageInfo('SetFocus is broken in Delphi.'+ CRLF+
