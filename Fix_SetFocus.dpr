@@ -4,7 +4,9 @@ uses
   FastMM4,
   Vcl.Forms,
   uMainForm in 'uMainForm.pas' {frmMain},
-  LightVcl.Visual.AppData in '..\..\Packages\CubicCommonControls\cbAppData.pas';
+  cFindSetFocus in 'cFindSetFocus.pas',
+  LightCore.AppData,
+  LightVcl.Visual.AppData;
 
 {$R *.res}
 

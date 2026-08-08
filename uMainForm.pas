@@ -21,7 +21,7 @@ INTERFACE
 
 USES
   Winapi.Windows, Winapi.messages, System.SysUtils, System.Classes, Vcl.Controls, Vcl.Forms,
-  Vcl.StdCtrls, Vcl.ExtCtrls, cFindSetFocus, Vcl.Menus, LightCore.SearchResult, Vcl.Mask;
+  Vcl.StdCtrls, Vcl.ExtCtrls, LightVcl.Visual.AppDataForm, cFindSetFocus, Vcl.Menus, LightCore.SearchResult, Vcl.Mask;
 
 TYPE
   TfrmMain = class(TLightForm)
@@ -203,7 +203,7 @@ begin
  TimerRew.Enabled:= True;
 
  Inc(CurFoundPos);
- if CurFoundPos > High(GetSelectedSearch.Positions) then
+ if CurFoundPos > GetSelectedSearch.Positions.Count-1 then
   begin
    Reset;
    lblRewind.Left:= 10000;
