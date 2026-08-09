@@ -8,3 +8,5 @@
 *.dcu
 *.dsk
 Fix_SetFocus.exe
+Fix_SetFocus.res
+Fix_SetFocus.drc
