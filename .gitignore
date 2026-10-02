@@ -10,3 +10,6 @@
 Fix_SetFocus.exe
 Fix_SetFocus.res
 Fix_SetFocus.drc
+
+# Temporary files of Claude Code sessions
+Temp/
